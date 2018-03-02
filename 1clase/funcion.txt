@@ -1,0 +1,10 @@
+Funciones:
+
+return_type function_name (type1 par1, type2 par2, ....)
+{
+function body
+
+return value, if any
+}
+
+luego para invocar la funcion se usa funtion_name(par1 ,par2, ...)
