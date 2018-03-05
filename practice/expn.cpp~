@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+double exp(double ex, unsigned int n)
+{
+  double exp=1;
+  for(int i=1; i<=n; i=i++)
+    {
+      ex = ex*exp;
+      exp=ex;
+
+    }
+  return ex;
+}
+int main()
+{
+
+  cout << exp(2,3) << endl;
+
+  return 0;
+
+}

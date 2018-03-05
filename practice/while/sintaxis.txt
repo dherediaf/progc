@@ -1,0 +1,15 @@
+WHILE
+
+while(condicion de finalizacion)
+{
+bloque de instrucciones
+}
+
+
+DO-WHILE
+
+do
+{
+bloque de instrucciones
+}
+while(condicion de finalizacion);

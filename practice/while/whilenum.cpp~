@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a=0;
+
+
+  while(a<=100)
+    {
+        cout << "Escribe un entero: " << endl;
+	cin >> a ;
+
+    }
+
+
+
+  return 0;
+}
