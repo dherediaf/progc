@@ -13,8 +13,9 @@ long double exp(long double ex, unsigned int n)
 
 int main()
 {
+  cout.precision(100);
   long double ex=0.0;
-  unsigned int n=200000;
+  long double n=2000000;
   ex=1+(1.0/n);
 
   cout << exp(ex,n) << endl;

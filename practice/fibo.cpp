@@ -3,13 +3,14 @@ using namespace std;
 
 int main()
 {
- unsigned long long int a=0;
- unsigned long long int b=1;
- unsigned long long int c=0;
- unsigned long long int contador=0;
+ double a=0.0;
+ double b=1.0;
+ double c=0.0;
+  int contador=0;
 
-  while(contador<=93)
+  while(contador<=100)
     {
+      cout.precision(30);
       cout << a << endl;
       c=a;
       a=a+b;

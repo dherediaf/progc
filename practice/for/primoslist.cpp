@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
- unsigned long int b=2;
+ unsigned long long int b=2;
   
-  for(unsigned long int i=2; i<=1000000; i=++i)
+  for(unsigned long long int i=2; i<=1000000; i=++i)
     {
       while(i%b != 0)
 	{

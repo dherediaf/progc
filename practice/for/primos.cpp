@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-  int a;
-  int b=2;
+  unsigned long long int a;
+  unsigned long long int b=2;
   cout << "Escriba un numero para verificar si es primo\n";
   cin >> a;
 

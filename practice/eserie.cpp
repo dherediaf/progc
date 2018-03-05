@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double exp(double ex, unsigned int n)
+/*double exp(double ex, unsigned int n)
 {
   double result=ex;
 
@@ -17,7 +17,7 @@ double exp(double ex, unsigned int n)
     }
   return result;
     }
-}
+    }*/
 int factorial(int fact)
 {
   int result=fact;
