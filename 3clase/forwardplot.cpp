@@ -8,8 +8,8 @@ double fdev(double x, double h);
 
 int main()
 {
-  double x=M_PI/3;
-  double h=0.01;
+  for(double i=-M_PI; i<=M_PI; i=i+0.01)
+    {
 
   /* printf("%.16e\n", fdev(x,h));
   
@@ -18,7 +18,9 @@ int main()
   cout << "h= \n";
   cin >> n; */
 
-  cout << fdev(x,h) << "\t" << cos(x) << endl;
+      cout << i << "\t" << fdev(i,h) << endl;
+
+    }
 
   return 0;
 }

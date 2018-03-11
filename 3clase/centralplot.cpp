@@ -9,18 +9,11 @@ double frichardson(double x, double h);
 
 int main()
 {
-  double x=M_PI/3;
-  double h=0.1;
+  for(double i=-M_PI; i<=M_PI; i += 0.01)
+    {
+      cout << i << "\t" << frichardson(i,0.01) << endl;
 
-  printf("%25.16e\n", fdev(x,h));
-  printf("%25.16e\n" , frichardson(x,h));
-  
-  /* cout << "x= \n";
-  cin >> x;
-  cout << "h= \n";
-  cin >> n;
-
-  cout << fdev(x,h) << "\t" << cos(x) << endl; */
+    }
 
   return 0;
 }
