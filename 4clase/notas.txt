@@ -1,0 +1,39 @@
+for( inicializacion; condicion cierta; cambio)
+
+
+inicializacion
+for( ; condicion; )
+{
+cambio
+}
+
+
+inicializacion
+for( ; ; )
+{
+cambio
+if( condicion==false ) break;
+}
+
+
+BREAK(sale del bucle), CONTINUE(salta y continua el bucle)
+
+SWITCH: Equivalente a else if (a==1),(a==2) ...
+
+swith(a)
+{
+case 0:
+A(a);
+break;
+
+case 2:
+B(a);
+break;
+
+ .
+ .
+ .
+
+default:
+D(a)
+}
