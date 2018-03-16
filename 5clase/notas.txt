@@ -1,0 +1,6 @@
+using fptr = double(double)
+doulbe trapezoid(const double a, fptr funct)
+
+Para compilar con c++ 11, se escribe g++-7 -std=c++11 "archivo"
+
+Para compilar con c se usa gcc "archivo"
