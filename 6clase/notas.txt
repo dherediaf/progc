@@ -1,0 +1,9 @@
+se define en gnuplot f(x)=...
+se define intervalor para x y y respectivamente [:][:]f(x)
+para lineas mas guresas lw "numero de linea"
+
+BISECCION
+-4clase biseccion.cpp
+
+REGULA.FALSI
+lo mismo que bisseccion solo que res= x2-(f(x2)(x1-x2))/(f(x1)-f(x2))

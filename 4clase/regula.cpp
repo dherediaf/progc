@@ -23,7 +23,7 @@ long double bis(long double a, long double b, long double tol, int lim, pk f)
   int step=0;//no importa el orden de a y b
   long double res=0;
   do{
-      res=(a+b)*0.5;
+      res= b-(f(b)*(a-b))/(f(a)-f(b));
       if(f(res)*f(a)>0)
 	a=res; //criterios para elegir el siguiente intervalo
       else

@@ -8,7 +8,7 @@ string esp(int var);
 
 int main()
 {
-  diam(20);
+  diam(40);
   return 0;
 }
 
