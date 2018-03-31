@@ -27,3 +27,6 @@ ctrl espacio marca
 alt < para ir al inicion de todo
 alt > para ir al final de todo
 con una leta y alt / se dan sugerencias de palabras
+
+para hacer atajos de comando personalizados se usa alias atajo=comando
+si se quiere permanente se agrega a .bashrc
