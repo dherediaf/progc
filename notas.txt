@@ -1,0 +1,29 @@
+SHEll
+para shell con historial se usa control y flechas arriba abajo
+
+buscar term para abrir shell, pero se pierden los atajos en emacs
+en ese caso se usa control c para reemplazar a control
+
+tambien sirve eshell
+
+shell command para ejecutar un archivo desde emacs alt !
+
+DIRED MODE(navegacion)
+marcar con %m
+marcar con m
+desmarcar con u
+marcar o demarcar todo con t
+borrar con D
+
+COMANDOS
+para buscar control s y para avanzar. y para retroceder control r
+para reemplazar alt % desde la linea de texto que se desee
+para rehacer es control x u
+ctrl w corta lo de antes
+ctrl k corta lo de despues hasta el final
+ctrl y pega
+alt w copia lo de despues hasta el final
+ctrl espacio marca 
+alt < para ir al inicion de todo
+alt > para ir al final de todo
+con una leta y alt / se dan sugerencias de palabras

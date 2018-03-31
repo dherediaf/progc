@@ -1,6 +1,6 @@
 #include <fstream> //incluir(manejar) archivos
 #include <iostream>
-#include <string>
+#include <string>      
 
 /* escribir: ofstream
    leer: ifstream  */
