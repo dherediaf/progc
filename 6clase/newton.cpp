@@ -15,7 +15,7 @@ int main()
 {
   std::cout.precision(10);
   std::cout.setf(std::ios::scientific);
-  std::cout << newton(10,1e-11,20,f,df) << "\n";
+  std::cout << newton(2,1e-11,20,f,df) << "\n";
   error(f,df,newton,"newtonerror.txt");
   return 0;
 }
@@ -32,7 +32,7 @@ double df(double x)
 
 double newton(double ini, double tol, int max, fun f1, dfun df1)
 {
-  for (int i = 1; i <= max, std::fabs(f1(ini))>=tol ; ++i)
+  for (int i = 1; i <= max && std::fabs(f1(ini))>=tol ; ++i)
   {
     ini = ini-(f1(ini)/df1(ini)); 
   }

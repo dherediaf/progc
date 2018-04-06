@@ -1,0 +1,22 @@
+se tienene 3 niveles de optimizacion
+para optimizar se usa:
+g++ -o2 "archivo".cpp
+
+para inidicar sobre errores de overflow por ejemplo, se usa:
+g++ -fsanitize=undefined "archivo".cpp
+
+pasar por referencia y por valor:
+Por poner un ejemplo sobre esto, imagina un documento físico que
+tienes en tus manos. Este documento lo pasas por valor cuando primero
+sacas una copia del documento y la copia la entregas a un compañero.
+Si el compañero, por algún accidente, mancha este documento, tu
+documento original no se verá afectado puesto que el compañero ha
+trabajado sobre una copia. Por el contrario, al pasar por referencia
+el documento significa que entregas el documento original a tu
+compañero, y si lo quema, crea uno nuevo con un contenido totalmente
+distinto y te lo devuelve, entonces ahora lo que te ha entregado será
+el documento y el documento original se perdió.
+-se usa & antes de la variable para pasar por referencia.
+-la variable en cuestion se puede volver constante para que dentro de
+la funcion no se modifique (const)
+

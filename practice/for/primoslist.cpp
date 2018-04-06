@@ -7,7 +7,7 @@ int main()
  int cont=0;
  int mem;
   
-  for(unsigned long long int i=2; i<=1000; i=++i)
+  for(long i=2; i<=1000; i=++i)
     {
       while(i%b != 0) //si i no divide a b entonces b aumenta
 	{
