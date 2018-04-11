@@ -1,0 +1,12 @@
+Generar numero aleatorios (semilla)
+-si se fija la semilla cada vez que se ejecute el programa van a aparecer los
+ mismos numeros
+
+Multiple compilation
+-se declaran las funciones en un archivo "nombre".h (header)
+-las funciones se implementan en otro archivo "nombre".cpp, como no se compila
+ no se puede crear un archivo ejecutable:
+ para crear objetos se usa g++ -c
+-luego en el codigo con la funcion main se añade #include ""nombre".h"
+-y se compila con:
+   g++ main.cpp "nombre".cpp

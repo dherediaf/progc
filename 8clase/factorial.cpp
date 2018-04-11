@@ -4,7 +4,7 @@ long fact(int lim);
 
 int main()
 {
-  std::cout << fact(9) << "\n";
+  std::cout << fact(900) << "\n";
   return 0;
 }
 
