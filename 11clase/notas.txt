@@ -1,0 +1,22 @@
+Muldidimanesional Arrays:
+siempre es mas eficiente utilizar un arreglo unidimensional para definir
+matrices no tan grandes, pues la memoria es unidimensional.
+
+* int "matriz" [3][5] // matriz de 3 filas y 5 columnas
+
+* las matrices se leen mas eficientemente si se recorren filas y columnas, pues
+  es el orden en que el computador guarda los datos, en c++
+
+* id=i*(filas)+j
+  double A[M*N]
+  A[i*(filas)+j]
+
+Puntero: guarda direcciones de memoria
+
+* int a=10;
+  int *ptr = &a;
+  *ptr //accede al valor al que apunra, es decir al valor de a, es decir 10
+
+*smart pointer
+ std::unique_ptr
+ std::shared_ptr

@@ -36,5 +36,6 @@ Arreglos y Apuntadores (matrices):
 
 Memoria:
 
-array y built-in usan la memoria en el stack, mientras que vector puede usar
-el heap en la memoria pues posee memoria dinamica.
+array y built-in usan la memoria en el stack, pues se les tiene que dar un
+tamaño, mientras que vector puede usar el heap en la memoria, si se le pide al
+usuario que de el tamaño, pues posee memoria dinamica.
