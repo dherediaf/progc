@@ -4,7 +4,7 @@ long fibo(int lim);
 
 int main()
 {
-  std::cout << fibo(10) << "\n";
+  std::cout << fibo(10) << "\n"; //decimo termino empezando desde cero
   return 0;
 }
 

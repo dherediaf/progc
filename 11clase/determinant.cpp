@@ -1,26 +1,54 @@
 #include <iostream>
 #include <vector>
-const int N=2;
-const int M=2;
-const int J=2;
+const int N=3;
 
 void defaultfillm(std::vector<int> &V, int F, int C, bool r); //llena de ceros si r=0 y de numeros1,2,3.. si r=1 
 void printm(std::vector<int> &V, int F, int C); //imprime las matrices
-std::vector<int>  multm(std::vector<int> &V, std::vector<int> &W, int NV, int MVW, int MW); //multiplica la matriz
+std::vector<int> detm(std::vector<int> &V, int F, int C, int Y);
 
 int main()
 {
-  std::vector<int> A(N*M);
-  std::vector<int> B(M*J);
-  std::vector<int> R(N*J);
-  
-  defaultfillm(A,N,M,1);
-  defaultfillm(B,M,J,1);
+  std::vector<int> A(N*N);
+  std::vector<int> M((N-1)*(N-1));
+  defaultfillm(A,N,N,1);
 
-  R=multm(A,B,N,M,J);
-  printm(R,N,J);
+  for(int i=0; i<N; ++i)
+    {
+      for (int j=0; j<N; ++i)
+	{
+	  M=detm(A,i,j,N);
+	  printm(M,N-1,N-1);
+	  std::cout << "\n";
+	}
+    }
   
   return 0;
+}
+
+std::vector<int> detm(std::vector<int> &V, int F, int C, int Y)
+{
+  std::vector<int> Tm((Y-1)*(Y-1));
+    if((F*N+C)%2==0)
+    {
+      for(int i=0; i<Y-1; ++i)
+	{
+	  for (int j=0; j<Y-1; ++i)
+	    {
+	      Tm[i*(Y-1)+j]=V[(i+1)*Y+j+1];
+	    }
+	}
+    }
+  else
+    {
+      for(int i=0; i<N-1; ++i)
+	{
+	  for (int j=0; j<N-1; ++i)
+	    {
+	      Tm[i*(N-1)+j]=(-1)*V[(i+1)*N+j+1];
+	    }
+	}
+    }
+    return Tm;
 }
 
 void defaultfillm(std::vector<int> &V, int F, int C, bool r)
@@ -53,23 +81,4 @@ void printm(std::vector<int> &V, int F, int C)
 	}
       std::cout << "\n";
     }
-}
-
-std::vector<int>  multm(std::vector<int> &V, std::vector<int> &W, int NV, int MVW, int MW)
-{
-  std::vector<int> T(NV*MW);
-  defaultfillm(T,NV,MW,0);
-  
-  //calcular matriz
-  for (int f = 0; f < NV; ++f)
-    {
-      for (int c = 0; c < MW; ++c)
-	{
-	  for (int i = 0; i < MVW; ++i)
-	    {
-	      T[f*MW+c] += V[f*MVW+i]*W[i*MW+c]; //filas por columnas
-	    }
-	}
-    }
-  return T;
 }
