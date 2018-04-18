@@ -18,14 +18,13 @@ int main()
 
 int detm(std::vector<int> &V, int K, int Y)
 {
-  if(Y=2){
-    return (V[0]*V[3])+(-1)*(V[2]*V[1]);
+  if(Y==1 && K==1){
+    return V[0];
   }
   
   int M=0;
   int a=K;
   std::vector<int> Tm((Y-1)*(Y-1));
-  std::vector<int> R((Y-1)*(Y-1));
   
     for (int r=0; r<K; ++r)
       {  
@@ -44,8 +43,7 @@ int detm(std::vector<int> &V, int K, int Y)
 	    }
 	  a=K;
 	}
-      R=Tm;
-      M += ((r%2==0)? V[r]*detm(R,K-1,Y-1) : (-1)*V[r]*detm(R,K-1,Y-1));      
+      M += ((r%2==0)? V[r]*detm(Tm,K-1,Y-1) : (-1)*V[r]*detm(Tm,K-1,Y-1));      
       }
 
     return  M;
@@ -59,7 +57,8 @@ void defaultfillm(std::vector<int> &V, int F, int C, bool r)
 	{
 	  //formas de llenar la matriz: se ponen las condiciones que se quieran
 	  if(r)
-	    {if(r=j)
+	    {
+	      if(r=j)
 	      V[i*C+j]=1;
 	      else V[i*C+j]=0;
 	      
