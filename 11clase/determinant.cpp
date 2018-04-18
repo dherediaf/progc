@@ -4,51 +4,51 @@ const int N=3;
 
 void defaultfillm(std::vector<int> &V, int F, int C, bool r); //llena de ceros si r=0 y de numeros1,2,3.. si r=1 
 void printm(std::vector<int> &V, int F, int C); //imprime las matrices
-std::vector<int> detm(std::vector<int> &V, int F, int C, int Y);
+int detm(std::vector<int> &V, int K, int Y);
 
 int main()
 {
   std::vector<int> A(N*N);
   std::vector<int> M((N-1)*(N-1));
   defaultfillm(A,N,N,1);
-
-  for(int i=0; i<N; ++i)
-    {
-      for (int j=0; j<N; ++i)
-	{
-	  M=detm(A,i,j,N);
-	  printm(M,N-1,N-1);
-	  std::cout << "\n";
-	}
-    }
   
+  std:: cout << detm(A,N,N)<<"\n";  
   return 0;
 }
 
-std::vector<int> detm(std::vector<int> &V, int F, int C, int Y)
+int detm(std::vector<int> &V, int K, int Y)
 {
+  if(Y=2){
+    return (V[0]*V[3])+(-1)*(V[2]*V[1]);
+  }
+  
+  int M=0;
+  int a=K;
   std::vector<int> Tm((Y-1)*(Y-1));
-    if((F*N+C)%2==0)
-    {
+  std::vector<int> R((Y-1)*(Y-1));
+  
+    for (int r=0; r<K; ++r)
+      {  
+  //para hallar las menores
       for(int i=0; i<Y-1; ++i)
 	{
-	  for (int j=0; j<Y-1; ++i)
+	  for (int j=0; j<Y-1; ++j)
 	    {
-	      Tm[i*(Y-1)+j]=V[(i+1)*Y+j+1];
+	      if(j==a){
+		Tm[i*(Y-1)+j]=V[(i+1)*Y+j+1];
+		++a;
+	      }
+	      else{
+		Tm[i*(Y-1)+j]=V[(i+1)*Y+j];
+	      }
 	    }
+	  a=K;
 	}
-    }
-  else
-    {
-      for(int i=0; i<N-1; ++i)
-	{
-	  for (int j=0; j<N-1; ++i)
-	    {
-	      Tm[i*(N-1)+j]=(-1)*V[(i+1)*N+j+1];
-	    }
-	}
-    }
-    return Tm;
+      R=Tm;
+      M += ((r%2==0)? V[r]*detm(R,K-1,Y-1) : (-1)*V[r]*detm(R,K-1,Y-1));      
+      }
+
+    return  M;
 }
 
 void defaultfillm(std::vector<int> &V, int F, int C, bool r)
@@ -59,8 +59,10 @@ void defaultfillm(std::vector<int> &V, int F, int C, bool r)
 	{
 	  //formas de llenar la matriz: se ponen las condiciones que se quieran
 	  if(r)
-	    {
-	      V[i*C+j]=i*C+j;
+	    {if(r=j)
+	      V[i*C+j]=1;
+	      else V[i*C+j]=0;
+	      
 	    }
 	  else
 	    {
