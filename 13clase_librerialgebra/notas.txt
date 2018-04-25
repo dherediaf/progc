@@ -1,0 +1,12 @@
+# Librerias Para Algebra Linear:
+//Netlib
+
+Optimizar --> -O2
+
+Librerias:
+-Intel MKL
+-AMD ACL
+-GSL //banderas para compilar: -lgsl -lgslcblas // -L ruta/../finruta
+-EIGEN //bandera para compilar: -I ruta/../finruta
+
+

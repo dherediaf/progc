@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-const int N=3;
+const int N=2;
 
 void defaultfillm(std::vector<int> &V, int F, int C, bool r); //llena de ceros si r=0 y de numeros1,2,3.. si r=1 
 void printm(std::vector<int> &V, int F, int C); //imprime las matrices
@@ -58,9 +58,7 @@ void defaultfillm(std::vector<int> &V, int F, int C, bool r)
 	  //formas de llenar la matriz: se ponen las condiciones que se quieran
 	  if(r)
 	    {
-	      if(r=j)
-	      V[i*C+j]=1;
-	      else V[i*C+j]=0;
+	      V[i*C+j]=i*C+j+1;
 	      
 	    }
 	  else
