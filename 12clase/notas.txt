@@ -1,0 +1,33 @@
+# Memoria Dinamica: pedir memoria en tiempo de ejecucion
+//pythontutor.com
+
+Pedir Memoria ---> new
+Liberar Memoria ---> delete
+
+Estructura para pedir memoria:
+================================================================
+double *a=nullptr;
+-
+-
+a = new double [N];
+-
+-
+delete [] a; //los corchetes se usan cuando se pide un arreglo
+a = nulptr;
+================================================================
+
+# Estructuras de Datos: crear un nuevo tipo de datos que almacene diferentes tipos de datos primitivos
+
+Se pueden declarar arreglos y vectores, sumando structuras (sobrecarga de operador), etc.
+
+Estructura para usar struct:
+===========================================================================================================================
+struct  complex { //el tipo de dato ahora se llama complex
+double x=0;
+int y=0;
+};
+complex a; //declarar elemento complex
+complex.x; //acceder a lo que alamacena en x
+
+//cuando se declara el operador como un puntero "complex *z;" entonces para acceder a los datos no se usa . sino -> "z->y"
+===========================================================================================================================
