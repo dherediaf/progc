@@ -1,0 +1,1 @@
+"u 2:3" para graficar la columna 2 versus la 3 en gnuplot antes del w lp
