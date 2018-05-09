@@ -1,0 +1,4 @@
+#Programacion Orientada a Objetos:
+
+Sobrecarga de operadores:
+perro operator+(perro otro);

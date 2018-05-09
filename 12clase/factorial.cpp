@@ -5,7 +5,7 @@ void factorial(int N);
 
 int main(void)
 {
-  factorial(520);
+  factorial(0);
   return 0;
 }
 
