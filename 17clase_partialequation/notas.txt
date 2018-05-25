@@ -1,0 +1,5 @@
+Animaciones:
+
+-Generalizar el codigo para que pare despues de cierto numero de pasos, cuando una precision dada se alcanza
+-Buscar el metyodo de acceleracion de Gauss-Jordan
+-Implementar la ecuacion de laplace
